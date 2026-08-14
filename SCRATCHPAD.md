@@ -1,26 +1,26 @@
 # Scratchpad
 
-## Tâche en cours
+## Current task
 
-Aucune — projet initialisé, pas encore de code écrit.
+None — project initialized, no code written yet.
 
-## Dernier état connu
+## Last known state
 
-- Dépôt créé, repoussé sur GitHub (paulrousset/personal-finance-dashboard).
-- `CLAUDE.md` en place avec le rôle de l'agent et le protocole de boucle.
-- `SPEC.md` rédigé avec l'objectif, la stack, le modèle de données et le contenu attendu du
-  dashboard (voir SPEC.md pour le détail).
-- Aucun code applicatif n'existe encore (pas de scaffolding Vite).
+- Repo created, pushed to GitHub (paulrousset/personal-finance-dashboard).
+- `CLAUDE.md` in place with the agent's role and the loop protocol.
+- `SPEC.md` written with the goal, stack, data model, and expected dashboard content (see
+  SPEC.md for details).
+- No application code exists yet (no Vite scaffolding).
 
-## Décisions prises en session
+## Decisions made this session
 
-- Rôle de l'agent défini dans CLAUDE.md : ingénieur senior full-stack + connaissance finance
-  personnelle française (PEA, CTO, assurance vie, etc.).
+- Agent role defined in CLAUDE.md: senior full-stack engineer + French personal finance
+  knowledge (PEA, CTO, life insurance, etc.).
+- Translated SPEC.md and SCRATCHPAD.md from French to English for shareability.
 
-## Prochaines étapes
+## Next steps
 
-1. Scaffolder le projet Vite + React + TypeScript.
-2. Définir le modèle de données (catégories, lignes d'actifs, historique) et le gabarit de
-   valeurs d'exemple.
-3. Construire l'écran principal (boîtes indices, donut, tableau détaillé) avec des données
-   d'exemple avant de brancher la saisie réelle.
+1. Scaffold the Vite + React + TypeScript project.
+2. Define the data model (categories, asset lines, history) and the example-value template.
+3. Build the main screen (index boxes, donut, detailed table) with example data before wiring
+   up real data entry.

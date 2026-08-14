@@ -1,70 +1,70 @@
-# Dashboard Patrimoine — spécifications de départ
+# Wealth Dashboard — initial specification
 
-## Objectif
+## Goal
 
-Dashboard complet de suivi du patrimoine personnel, inspiré d'un outil type "Kwid" (vue portefeuille
-avec donut d'allocation, objectif, P&L, tableau détaillé par catégorie).
+Comprehensive personal wealth tracking dashboard, inspired by a "Kwid"-style tool (portfolio view
+with allocation donut, target, P&L, detailed table by category).
 
 ## Stack
 
-Application web complète en **Vite + React / TypeScript** (pas un fichier statique). Aucun backend
-prévu à ce stade : les données sont saisies et stockées côté client.
+Full web application in **Vite + React / TypeScript** (not a static file). No backend planned at
+this stage: data is entered and stored client-side.
 
-## Catégories d'actifs suivies
+## Asset categories tracked
 
-- Immobilier
-- Assurance vie
-- PEA
-- CTO
-- Livrets
+- Real estate
+- Life insurance (assurance vie)
+- PEA (French equity savings plan)
+- CTO (taxable brokerage account)
+- Savings accounts (livrets)
 - Crypto
 
-## Modèle de données
+## Data model
 
-Détail ligne par ligne dans chaque catégorie (ex : chaque bien immobilier, chaque fonds
-d'assurance vie, chaque ligne PEA, chaque ligne CTO, chaque actif crypto), avec sous-totaux par
-catégorie — à l'image du tableau "Portefeuille" de référence.
+Line-by-line detail within each category (e.g. each property, each life insurance fund, each PEA
+line, each CTO line, each crypto asset), with subtotals per category — matching the reference
+"Portfolio" table.
 
-Chaque ligne porte : nom, valeur actuelle, montant investi, P&L jour, P&L non réalisé, allocation (%).
+Each line carries: name, current value, amount invested, daily P&L, unrealized P&L, allocation (%).
 
-Départ avec un gabarit à valeurs d'exemple ; saisie manuelle des montants réels ensuite (pas
-d'intégration API bancaire/courtier à ce stade).
+Starts with a template using example values; real amounts are entered manually afterwards (no
+bank/broker API integration at this stage).
 
-## Écran principal
+## Main screen
 
-**Rangée du haut** — 4 boîtes de performance (daily, YTD), code couleur rouge/vert/jaune
-(négatif/positif/neutre) :
+**Top row** — 4 performance boxes (daily, YTD), red/green/yellow color coding
+(negative/positive/neutral):
 
-1. Indices Asie : Nikkei, Hang Seng, Shanghai, Kospi
-2. Indices Europe : STOXX 600, DAX, CAC 40, FTSE
-3. Indices US : S&P 500, Nasdaq, Dow Jones, Russell 2000
-4. Performance du portefeuille (daily, YTD)
+1. Asia indices: Nikkei, Hang Seng, Shanghai, Kospi
+2. Europe indices: STOXX 600, DAX, CAC 40, FTSE
+3. US indices: S&P 500, Nasdaq, Dow Jones, Russell 2000
+4. Portfolio performance (daily, YTD)
 
-**Donut chart d'allocation** par catégorie, avec au centre : patrimoine total, variation du jour, ATH.
-En dessous, stats clés : plus-value, TRI (rendement annualisé money-weighted), revenus passifs.
+**Allocation donut chart** by category, with in the center: total net worth, daily change, ATH.
+Below it, key stats: unrealized gain, IRR (money-weighted annualized return), passive income.
 
-**Tableau détaillé** par catégorie et par ligne : nom, valeur/investi, P&L jour, P&L non réalisé,
+**Detailed table** by category and line: name, value/invested, daily P&L, unrealized P&L,
 allocation.
 
-## Décisions prises
+## Decisions made
 
-- Vite + React/TS plutôt qu'un site statique : besoin d'interactivité (saisie, calculs dérivés,
-  graphiques) qui dépasse ce qu'un simple HTML/JS permet proprement.
-- Détail ligne par ligne plutôt qu'un simple total par catégorie : nécessaire pour calculer le TRI
-  et le P&L par ligne, et pour retrouver la logique du tableau de référence.
-- Saisie manuelle au départ plutôt qu'une intégration bancaire : réduit la complexité initiale,
-  laisse la porte ouverte à une automatisation plus tard.
+- Vite + React/TS instead of a static site: needs interactivity (data entry, derived
+  calculations, charts) beyond what plain HTML/JS can cleanly provide.
+- Line-by-line detail instead of a simple per-category total: needed to compute IRR and P&L per
+  line, and to match the reference table's logic.
+- Manual data entry at first instead of a bank integration: reduces initial complexity, leaves
+  room for automation later.
 
-## État des composants
+## Component status
 
-| Composant                                          | Statut  |
-| -------------------------------------------------- | ------- |
-| Scaffolding Vite + React + TS                      | À faire |
-| Modèle de données (catégories, lignes, historique) | À faire |
-| Saisie / édition des lignes d'actifs               | À faire |
-| Calcul P&L (jour, non réalisé)                     | À faire |
-| Calcul TRI (money-weighted return)                 | À faire |
-| Récupération des cours d'indices (Asie/Europe/US)  | À faire |
-| Boîtes de performance indices + portefeuille       | À faire |
-| Donut chart d'allocation                           | À faire |
-| Tableau détaillé par catégorie/ligne               | À faire |
+| Component                               | Status      |
+| --------------------------------------- | ----------- |
+| Vite + React + TS scaffolding           | Not started |
+| Data model (categories, lines, history) | Not started |
+| Asset line entry / editing              | Not started |
+| P&L calculation (daily, unrealized)     | Not started |
+| IRR calculation (money-weighted return) | Not started |
+| Index price fetching (Asia/Europe/US)   | Not started |
+| Index + portfolio performance boxes     | Not started |
+| Allocation donut chart                  | Not started |
+| Detailed table by category/line         | Not started |
